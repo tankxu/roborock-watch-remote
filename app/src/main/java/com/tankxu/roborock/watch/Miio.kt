@@ -97,7 +97,7 @@ class Miio(
 
     /** 连接: 先试已知 IP, 不行扫网段 */
     fun connect(localIp: String?): Boolean = synchronized(lock) {
-        if (hello(ip)) return true
+        repeat(3) { if (hello(ip)) return true }     // 手表WiFi抖动, 单次可能丢包, 重试
         if (localIp != null) {
             val f = scan(localIp)
             if (f != null && hello(f)) return true

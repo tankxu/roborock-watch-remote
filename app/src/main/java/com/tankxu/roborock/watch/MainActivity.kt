@@ -114,7 +114,7 @@ class MainActivity : AppCompatActivity() {
         loopJob = scope.launch {
             val c = miio.connect(localIp())
             setStatus(if (c) "在线" else "离线", if (c) R.color.ok else R.color.bad)
-            var rc = false; var seq = 0; var lastSend = 0L; var idleSince = 0L; var movingPrev = false
+            var rc = false; var seq = 0; var lastSend = 0L; var idleSince = 0L; var movingPrev = false; var lastConn = 0L
             while (isActive) {
                 val d = dir
                 val now = System.currentTimeMillis()
@@ -142,6 +142,11 @@ class MainActivity : AppCompatActivity() {
                     } else if (now - idleSince > 8000) {
                         miio.send("app_rc_end", miio.arr(), localIp()); rc = false
                     }
+                }
+                if (!moving && !miio.connected && now - lastConn > 3000) {   // 空闲时自动重连
+                    lastConn = now
+                    val ok = miio.connect(localIp())
+                    setStatus(if (ok) "在线" else "离线", if (ok) R.color.ok else R.color.bad)
                 }
                 movingPrev = moving
                 delay(60)
