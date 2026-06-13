@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_radial">
+
+    <!-- 顶栏:标题 + 在线状态点(点击改配置) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="T7S 遥控"
+            android:textColor="@color/fg"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="● 连接中"
+            android:textColor="@color/warn"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- 十字方向键 + 中心回充 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnUp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/key_bg"
+            android:scaleType="center"
+            android:src="@drawable/ic_up"
+            android:tint="@color/key_icon"
+            android:contentDescription="前进" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="11dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnLeft"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/key_bg"
+                android:scaleType="center"
+                android:src="@drawable/ic_left"
+                android:tint="@color/key_icon"
+                android:contentDescription="左转" />
+
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="11dp"
+                android:background="@drawable/key_home_bg"
+                android:scaleType="center"
+                android:src="@drawable/ic_reset"
+                android:tint="@color/key_icon"
+                android:contentDescription="回充" />
+
+            <ImageButton
+                android:id="@+id/btnRight"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/key_bg"
+                android:scaleType="center"
+                android:src="@drawable/ic_right"
+                android:tint="@color/key_icon"
+                android:contentDescription="右转" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnDown"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/key_bg"
+            android:scaleType="center"
+            android:src="@drawable/ic_down"
+            android:tint="@color/key_icon"
+            android:contentDescription="后退" />
+    </LinearLayout>
+</FrameLayout>

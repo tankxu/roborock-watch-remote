@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 沿用扫地机网页控制台配色 -->
+    <color name="bg">#FF0A0D12</color>
+    <color name="surface">#FF14171C</color>
+    <color name="accent">#FF4A90FF</color>   <!-- 方向键蓝 -->
+    <color name="ok">#FF3FD07A</color>       <!-- 在线/回充绿 -->
+    <color name="warn">#FFFBBF24</color>
+    <color name="bad">#FFE0566A</color>
+    <color name="fg">#FFE8ECF2</color>
+    <color name="fg2">#FF9AA3B1</color>
+    <color name="fg3">#FF5F6874</color>
+
+    <color name="sheet_bg">#E60A0D12</color>
+    <color name="scrim">#66000000</color>
+    <color name="btn_bg">#14FFFFFF</color>
+    <color name="btn_bg_press">#FF2F6BD6</color>
+    <color name="handle">#80E6F0EE</color>
+
+    <color name="ic_launcher_background">#FF0A0D12</color>
+</resources>

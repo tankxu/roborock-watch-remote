@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 两侧圆耳（扬声器） -->
+    <path android:fillColor="#E6F0EE" android:pathData="M24,56 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 Z" />
+    <path android:fillColor="#E6F0EE" android:pathData="M74,56 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 Z" />
+
+    <!-- 头顶摄像头 + 天线杆 -->
+    <path android:fillColor="#E6F0EE" android:pathData="M52.5,25 L55.5,25 L55.5,30 L52.5,30 Z" />
+    <path android:fillColor="#2DD4BF" android:pathData="M50.5,23 a3.5,3.5 0 1,0 7,0 a3.5,3.5 0 1,0 -7,0 Z" />
+
+    <!-- 白色头盔 -->
+    <path android:fillColor="#E6F0EE"
+        android:pathData="M46,28 L62,28 Q76,28 76,42 L76,68 Q76,82 62,82 L46,82 Q32,82 32,68 L32,42 Q32,28 46,28 Z" />
+
+    <!-- 黑色面屏 -->
+    <path android:fillColor="#0A0F0E"
+        android:pathData="M48,40 L60,40 Q70,40 70,50 L70,64 Q70,74 60,74 L48,74 Q38,74 38,64 L38,50 Q38,40 48,40 Z" />
+
+    <!-- 两只青色大眼 -->
+    <path android:fillColor="#2DD4BF" android:pathData="M43,55 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 Z" />
+    <path android:fillColor="#2DD4BF" android:pathData="M55,55 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 Z" />
+
+    <!-- 微笑嘴 -->
+    <path android:fillColor="#2DD4BF"
+        android:pathData="M51,65 L57,65 Q59,65 59,67 Q59,69 57,69 L51,69 Q49,69 49,67 Q49,65 51,65 Z" />
+</vector>

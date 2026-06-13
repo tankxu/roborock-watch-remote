@@ -1,0 +1,14 @@
+# 真实配置(含扫地机 token 等敏感信息)—— 切勿上传
+app/src/main/java/xyz/tank/roborock/watch/Config.kt
+
+*.iml
+.gradle/
+/local.properties
+.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+app/build/
