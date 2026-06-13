@@ -27,7 +27,7 @@ class Miio(
     private var stamp = 0L
     private var t0 = 0L
     private var mid = 100
-    private val sock = DatagramSocket().apply { soTimeout = 1000 }
+    private val sock = DatagramSocket().apply { soTimeout = 3000 }   // 手表WiFi延迟大, 放宽
     private val lock = Any()
 
     val connected: Boolean get() = didBytes != null

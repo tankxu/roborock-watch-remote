@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
             scope.launch {
                 miio.send("app_rc_end", miio.arr(), localIp())
                 val ok = miio.send("app_charge", miio.arr(), localIp())
-                setStatus(if (ok) "回充中" else "离线", if (ok) R.color.ok else R.color.bad)
+                setStatus(if (ok) "在线" else "离线", if (ok) R.color.ok else R.color.bad)
             }
         }
     }
@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity() {
         loopJob?.cancel()
         loopJob = scope.launch {
             val c = miio.connect(localIp())
-            setStatus(if (c) "扫地机在线" else "扫地机离线", if (c) R.color.ok else R.color.bad)
+            setStatus(if (c) "在线" else "离线", if (c) R.color.ok else R.color.bad)
             var rc = false; var seq = 0; var lastSend = 0L; var idleSince = 0L; var movingPrev = false
             while (isActive) {
                 val d = dir
@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
                         val p = JSONObject().put("omega", w).put("velocity", v)
                             .put("duration", 1000).put("seqnum", seq)
                         val ok = miio.send("app_rc_move", miio.arr(p), localIp())
-                        setStatus(if (ok) "遥控中" else "扫地机离线", if (ok) R.color.accent else R.color.bad)
+                        setStatus(if (ok) "在线" else "离线", if (ok) R.color.ok else R.color.bad)
                         lastSend = now
                     }
                 } else if (rc) {
@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity() {
                             .put("duration", 500).put("seqnum", seq)
                         miio.send("app_rc_move", miio.arr(p), localIp())
                         idleSince = now
-                        setStatus("扫地机在线", R.color.ok)
+                        setStatus("在线", R.color.ok)
                     } else if (now - idleSince > 8000) {
                         miio.send("app_rc_end", miio.arr(), localIp()); rc = false
                     }
