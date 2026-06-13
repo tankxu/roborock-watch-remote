@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_radial">
+    android:background="@color/bg">
 
     <!-- 顶栏:标题 + 在线状态点(点击改配置) -->
     <LinearLayout
@@ -11,9 +11,9 @@
         android:layout_gravity="top"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        android:paddingTop="8dp">
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="6dp">
 
         <TextView
             android:layout_width="0dp"
@@ -21,7 +21,7 @@
             android:layout_weight="1"
             android:text="T7S 遥控"
             android:textColor="@color/fg"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -33,18 +33,20 @@
             android:textSize="11sp" />
     </LinearLayout>
 
-    <!-- 十字方向键 + 中心回充 -->
+    <!-- D-pad 卡片(网页同款) -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="@drawable/card_bg"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:padding="8dp">
 
         <ImageButton
             android:id="@+id/btnUp"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/key_bg"
             android:scaleType="center"
             android:src="@drawable/ic_up"
@@ -54,15 +56,15 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
             android:orientation="horizontal"
             android:gravity="center">
 
             <ImageButton
                 android:id="@+id/btnLeft"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:background="@drawable/key_bg"
                 android:scaleType="center"
                 android:src="@drawable/ic_left"
@@ -71,20 +73,20 @@
 
             <ImageButton
                 android:id="@+id/btnHome"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
                 android:background="@drawable/key_home_bg"
                 android:scaleType="center"
-                android:src="@drawable/ic_reset"
+                android:src="@drawable/ic_home"
                 android:tint="@color/key_icon"
                 android:contentDescription="回充" />
 
             <ImageButton
                 android:id="@+id/btnRight"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:background="@drawable/key_bg"
                 android:scaleType="center"
                 android:src="@drawable/ic_right"
@@ -94,8 +96,8 @@
 
         <ImageButton
             android:id="@+id/btnDown"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/key_bg"
             android:scaleType="center"
             android:src="@drawable/ic_down"
