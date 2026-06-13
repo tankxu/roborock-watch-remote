@@ -1,4 +1,4 @@
-package xyz.tank.roborock.watch
+package com.tankxu.roborock.watch
 
 import org.json.JSONArray
 import org.json.JSONObject

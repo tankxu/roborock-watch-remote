@@ -1,4 +1,4 @@
-package xyz.tank.roborock.watch
+package com.tankxu.roborock.watch
 
 /**
  * 复制本文件为 Config.kt 并填入你自己的值。Config.kt 已被 .gitignore 排除, 不会上传。

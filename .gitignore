@@ -1,5 +1,5 @@
 # 真实配置(含扫地机 token 等敏感信息)—— 切勿上传
-app/src/main/java/xyz/tank/roborock/watch/Config.kt
+app/src/main/java/com/tankxu/roborock/watch/Config.kt
 
 *.iml
 .gradle/

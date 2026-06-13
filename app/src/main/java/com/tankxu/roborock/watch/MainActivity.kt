@@ -1,4 +1,4 @@
-package xyz.tank.roborock.watch
+package com.tankxu.roborock.watch
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -18,7 +18,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import org.json.JSONObject
-import xyz.tank.roborock.watch.databinding.ActivityMainBinding
+import com.tankxu.roborock.watch.databinding.ActivityMainBinding
 import java.net.Inet4Address
 import java.net.NetworkInterface
 

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "xyz.tank.roborock.watch"
+    namespace = "com.tankxu.roborock.watch"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "xyz.tank.roborock.watch"
+        applicationId = "com.tankxu.roborock.watch"
         minSdk = 26          // Android 8.0，手表底层系统
         targetSdk = 34
         versionCode = 1
